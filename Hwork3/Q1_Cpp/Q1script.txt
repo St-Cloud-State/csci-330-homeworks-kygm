@@ -1,0 +1,36 @@
+Script started on 2025-02-14 02:06:22+00:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="238" LINES="18"]
+[0;32m@kygm [0m➜ [1;34m/workspaces/csci-330-homeworks-kygm/Hwork3/Q1_Cpp [0;36m([1;31mmain[0;36m) [0m$ g++ quicksort.cpp
+[0;32m@kygm [0m➜ [1;34m/workspaces/csci-330-homeworks-kygm/Hwork3/Q1_Cpp [0;36m([1;31mmain[0;36m) [0m$ ./a.out
+Enter the number of elements to sort: 4
+Enter the elements of the array to be sorted:
+2 1 2 3
+Sorted array:
+1 2 2 3 [0;32m@kygm [0m➜ [1;34m/workspaces/csci-330-homeworks-kygm/Hwork3/Q1_Cpp [0;36m([1;31mmain[0;36m) [0m$ ./a.out
+Enter the number of elements to sort: 7
+Enter the elements of the array to be sorted:
+54
+23
+2342
+56
+1
+221
+2
+Sorted array:
+1 2 23 54 56 221 2342 [0;32m@kygm [0m➜ [1;34m/workspaces/csci-330-homeworks-kygm/Hwork3/Q1_Cpp [0;36m([1;31mmain[0;36m) [0m$ ./a.out
+Enter the number of elements to sort: 10
+Enter the elements of the array to be sorted:
+1
+1231
+32
+3
+4
+5
+4353
+6
+4
+3
+Sorted array:
+1 3 3 4 4 5 6 32 1231 4353 [0;32m@kygm [0m➜ [1;34m/workspaces/csci-330-homeworks-kygm/Hwork3/Q1_Cpp [0;36m([1;31mmain[0;36m) [0m$ 2[Kexit
+exit
+
+Script done on 2025-02-14 02:07:09+00:00 [COMMAND_EXIT_CODE="0"]
