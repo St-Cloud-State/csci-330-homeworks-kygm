@@ -1,0 +1,335 @@
+Script started on 2025-03-14 03:40:39+00:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="231" LINES="17"]
+[0;32m@kygm [0m➜ [1;34m/workspaces/csci-330-homeworks-kygm/Hwork5 [0;36m([1;31mmain[0;36m) [0m$ exitsbcl --load parser.lisp
+This is SBCL 1.4.3, an implementation of ANSI Common Lisp.
+More information about SBCL is available at <http://www.sbcl.org/>.
+
+SBCL is free software, provided as is, with absolutely no warranty.
+It is mostly in the public domain; some portions are provided under
+BSD-style licenses.  See the CREDITS and COPYING files in the
+distribution for more information.
+
+; file: /workspaces/csci-330-homeworks-kygm/Hwork5/parser.lisp
+; in: DEFUN LFN
+;     (L_P_FN (CDR STR))
+; 
+; caught STYLE-WARNING:
+;   undefined function: L_P_FN
+; 
+; compilation unit finished
+;   Undefined function:
+;     L_P_FN
+;   caught 1 STYLE-WARNING condition
+
+; file: /workspaces/csci-330-homeworks-kygm/Hwork5/parser.lisp
+; in: DEFUN EFN
+;     (E_P_FN G)
+; 
+; caught STYLE-WARNING:
+;   undefined function: E_P_FN
+; 
+; compilation unit finished
+;   Undefined function:
+;     E_P_FN
+;   caught 1 STYLE-WARNING condition
+
+; file: /workspaces/csci-330-homeworks-kygm/Hwork5/parser.lisp
+; in: DEFUN IFN
+;     (APPEND SFNRESULT (LIST 'ERR))
+; ==>
+;   (SB-IMPL::APPEND2 SFNRESULT (LIST 'ERR))
+; 
+; caught WARNING:
+;   Derived type of SFNRESULT is
+;     (VALUES (MEMBER ERR) &OPTIONAL),
+;   conflicting with its asserted type
+;     LIST.
+;   See also:
+;     The SBCL Manual, Node "Handling of Types"
+
+; file: /workspaces/csci-330-homeworks-kygm/Hwork5/parser.lisp
+; in: DEFUN IFN
+;     (I_P_FN SFNRESULT)
+; 
+; caught STYLE-WARNING:
+;   undefined function: I_P_FN
+; 
+; compilation unit finished
+;   Undefined function:
+;     I_P_FN
+;   caught 1 WARNING condition
+;   caught 1 STYLE-WARNING condition
+* (print '(The following are seven successful parses. This can be seen by the lack of error state and the successful recursion through each string))
+
+(THE FOLLOWING ARE SEVEN SUCCESSFUL PARSES. THIS CAN BE SEEN BY THE LACK OF
+     ERROR STATE AND THE SUCCESSFUL RECURSION THROUGH EACH STRING) 
+(THE FOLLOWING ARE SEVEN SUCCESSFUL PARSES. THIS CAN BE SEEN BY THE LACK OF
+     ERROR STATE AND THE SUCCESSFUL RECURSION THROUGH EACH STRING)
+* (ifn '(i x s))
+
+(IN IFN) 
+(I X S) 
+(IN EFN) 
+(X S) 
+(IN GFN) 
+(X S) 
+(IN E_P_FN) 
+(S) 
+(IN SFN) 
+(S) 
+(IN I_P_FN) 
+NIL 
+NIL
+* (ifn '(i w o x o y d s s b e s))
+
+(IN IFN) 
+(I W O X O Y D S S B E S) 
+(IN EFN) 
+(W O X O Y D S S B E S) 
+(IN GFN) 
+(W O X O Y D S S B E S) 
+(IN E_P_FN) 
+(O X O Y D S S B E S) 
+(IN GFN) 
+(X O Y D S S B E S) 
+(IN E_P_FN) 
+(O Y D S S B E S) 
+(IN GFN) 
+(Y D S S B E S) 
+(IN E_P_FN) 
+(D S S B E S) 
+(IN SFN) 
+(D S S B E S) 
+(IN LFN) 
+(S S B E S) 
+(IN L_P_FN) 
+(S B E S) 
+(IN LFN) 
+(B E S) 
+(IN I_P_FN) 
+(E S) 
+(IN SFN) 
+(S) 
+NIL
+* (ifn '(i z o x o w o y s))
+
+(IN IFN) 
+(I Z O X O W O Y S) 
+(IN EFN) 
+(Z O X O W O Y S) 
+(IN GFN) 
+(Z O X O W O Y S) 
+(IN E_P_FN) 
+(O X O W O Y S) 
+(IN GFN) 
+(X O W O Y S) 
+(IN E_P_FN) 
+(O W O Y S) 
+(IN GFN) 
+(W O Y S) 
+(IN E_P_FN) 
+(O Y S) 
+(IN GFN) 
+(Y S) 
+(IN E_P_FN) 
+(S) 
+(IN SFN) 
+(S) 
+(IN I_P_FN) 
+NIL 
+NIL
+* (ifn '(i x o y s))
+
+(IN IFN) 
+(I X O Y S) 
+(IN EFN) 
+(X O Y S) 
+(IN GFN) 
+(X O Y S) 
+(IN E_P_FN) 
+(O Y S) 
+(IN GFN) 
+(Y S) 
+(IN E_P_FN) 
+(S) 
+(IN SFN) 
+(S) 
+(IN I_P_FN) 
+NIL 
+NIL
+* (ifn '(i z o x o w s))     
+
+(IN IFN) 
+(I Z O X O W S) 
+(IN EFN) 
+(Z O X O W S) 
+(IN GFN) 
+(Z O X O W S) 
+(IN E_P_FN) 
+(O X O W S) 
+(IN GFN) 
+(X O W S) 
+(IN E_P_FN) 
+(O W S) 
+(IN GFN) 
+(W S) 
+(IN E_P_FN) 
+(S) 
+(IN SFN) 
+(S) 
+(IN I_P_FN) 
+NIL 
+NIL
+* (ifn '(i x o y d s))  
+
+(IN IFN) 
+(I X O Y D S) 
+(IN EFN) 
+(X O Y D S) 
+(IN GFN) 
+(X O Y D S) 
+(IN E_P_FN) 
+(O Y D S) 
+(IN GFN) 
+(Y D S) 
+(IN E_P_FN) 
+(D S) 
+(IN SFN) 
+(D S) 
+(IN LFN) 
+(S) 
+(IN L_P_FN) 
+NIL 
+(IN I_P_FN) 
+NIL 
+NIL
+* (ifn '(i x s o))
+
+(IN IFN) 
+(I X S O) 
+(IN EFN) 
+(X S O) 
+(IN GFN) 
+(X S O) 
+(IN E_P_FN) 
+(S O) 
+(IN SFN) 
+(S O) 
+(IN I_P_FN) 
+(O) 
+(O)
+* (print '(As you can see - no errors and successful recursion. Now the following are strings of different lengths that cannot be parsed by the grammar))
+
+(AS YOU CAN SEE - NO ERRORS AND SUCCESSFUL RECURSION. NOW THE FOLLOWING ARE
+ STRINGS OF DIFFERENT LENGTHS THAT CANNOT BE PARSED BY THE GRAMMAR) 
+(AS YOU CAN SEE - NO ERRORS AND SUCCESSFUL RECURSION. NOW THE FOLLOWING ARE
+ STRINGS OF DIFFERENT LENGTHS THAT CANNOT BE PARSED BY THE GRAMMAR)
+* (ifn '(i o x s))
+
+(IN IFN) 
+(I O X S) 
+(IN EFN) 
+(O X S) 
+(IN GFN) 
+(O X S) 
+(IN E_P_FN) 
+(ERR) 
+(IN SFN) 
+(ERR) 
+(IN I_P_FN) 
+NIL 
+NIL
+* (ifn '(i d s b e s))
+
+(IN IFN) 
+(I D S B E S) 
+(IN EFN) 
+(D S B E S) 
+(IN GFN) 
+(D S B E S) 
+(IN E_P_FN) 
+(ERR) 
+(IN SFN) 
+(ERR) 
+(IN I_P_FN) 
+NIL 
+NIL
+* (ifn '(i k o y d s e s))
+
+(IN IFN) 
+(I K O Y D S E S) 
+(IN EFN) 
+(K O Y D S E S) 
+(IN GFN) 
+(K O Y D S E S) 
+(IN E_P_FN) 
+(ERR) 
+(IN SFN) 
+(ERR) 
+(IN I_P_FN) 
+NIL 
+NIL
+* (ifn '(i m x o y o s))
+
+(IN IFN) 
+(I M X O Y O S) 
+(IN EFN) 
+(M X O Y O S) 
+(IN GFN) 
+(M X O Y O S) 
+(IN E_P_FN) 
+(ERR) 
+(IN SFN) 
+(ERR) 
+(IN I_P_FN) 
+NIL 
+NIL
+* (ifn '(i q o d s b e))
+
+(IN IFN) 
+(I Q O D S B E) 
+(IN EFN) 
+(Q O D S B E) 
+(IN GFN) 
+(Q O D S B E) 
+(IN E_P_FN) 
+(ERR) 
+(IN SFN) 
+(ERR) 
+(IN I_P_FN) 
+NIL 
+NIL
+* (ifn '(i r o x o w d b e s))
+
+(IN IFN) 
+(I R O X O W D B E S) 
+(IN EFN) 
+(R O X O W D B E S) 
+(IN GFN) 
+(R O X O W D B E S) 
+(IN E_P_FN) 
+(ERR) 
+(IN SFN) 
+(ERR) 
+(IN I_P_FN) 
+NIL 
+NIL
+* (ifn '(i k a y d s e s))
+
+(IN IFN) 
+(I K A Y D S E S) 
+(IN EFN) 
+(K A Y D S E S) 
+(IN GFN) 
+(K A Y D S E S) 
+(IN E_P_FN) 
+(ERR) 
+(IN SFN) 
+(ERR) 
+(IN I_P_FN) 
+NIL 
+NIL
+* (sb-ext:exit)
+[0;32m@kygm [0m➜ [1;34m/workspaces/csci-330-homeworks-kygm/Hwork5 [0;36m([1;31mmain[0;36m) [0m$ a[Kexit
+exit
+
+Script done on 2025-03-14 03:42:12+00:00 [COMMAND_EXIT_CODE="0"]
